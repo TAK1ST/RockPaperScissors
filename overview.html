@@ -2,16 +2,72 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css">
-  <title>overview</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(0, 52, 76, 1) 100%);
+        }
+
+        .box-container {
+
+            background-color: #0E46A3;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+            margin: 0 auto; /* Center the container horizontally */
+            text-align: center;
+            padding: 20px; /* Add padding for better spacing */
+        }
+
+        .box h1, .box p {
+            color: #E1F7F5;
+        }
+
+        .next-page-button {
+            
+            color: white;
+            border: 2px solid white;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .next-mainpage-button:hover {
+            background: linear-gradient(0deg, white, blue); /* Màu nền thay đổi khi hover */
+            
+            transform: scale(2); /* Phóng to button một chút */
+        }
+    </style>
 </head>
 
 <body>
+    <div class="box-container">
+        <div class="box">
+            <h1>Overview</h1>
+            <p>The first known mention of the game was in the book  
+                by the Ming-dynasty writer Xie Zhaozhe, who wrote that 
+                the game dated back to the time of the Han dynasty. In
+                the book, the game was called shoushiling. Li Rihua's book Note of
+                Liuyanzhai also mentions this game.</p>
+        </div>
+    </div>
+    <button class="next-mainpage-button" onclick="goToNextPage()">&#9654;</button>
 
+    <script>
+        function goToNextPage() {
+            window.location.href = 'index.html'; // Replace with the actual URL of the next page
+        }
+    </script>
 </body>
-
-
 
 </html>
