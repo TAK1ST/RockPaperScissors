@@ -1,4 +1,4 @@
-let score = 9;
+let score = 0;
 
 function playGame(userChoice) {
     const choices = ['rock', 'paper', 'scissors'];
@@ -23,6 +23,8 @@ function playGame(userChoice) {
     if (score === 10) {
         showFireworks();
     }
+
+    //create display result. (Win,Lost,Draw)
     function displayResultMessage(result) {
         const message = document.createElement('div');
         message.className = 'result-message';
@@ -37,11 +39,11 @@ function playGame(userChoice) {
 }
 
 function showRules() {
-    document.getElementById('rulesModal').style.display = 'flex';
+    document.getElementById('rulesModal').style.display = 'flex'; // change rulesModal none to  flex.
 }
 
 function hideRules() {
-    document.getElementById('rulesModal').style.display = 'none';
+    document.getElementById('rulesModal').style.display = 'none'; 
 }
 
 window.onclick = function(event) {
@@ -66,5 +68,5 @@ function showFireworks() {
 
     setTimeout(() => {
         fireworksContainer.remove();
-    }, 10000);
+    }, 1000);
 }

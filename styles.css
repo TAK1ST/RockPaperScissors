@@ -5,7 +5,6 @@ body {
     justify-content: center;
     height: 100vh;
     /*viewport height:tạo các phần tử có kích thước phụ thuộc vào chiều cao của màn hình.*/
-    background: rgb(2, 0, 36);
     background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(0, 52, 76, 1) 100%);
     margin: 0;
     padding: 0;
@@ -16,21 +15,20 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin: 5px;
     color: white;
 }
 
 .header__title {
 
     font-size: 3em;
-    /* 'em' relative to the font-size of the parent element, 
-                        but if not the front-size of the parent element it will 
-                        default to the browser's default size. */
     font-family: 'Arial', serif;
     font-weight: bold;
     text-align: center;
     color: white;
+    margin: 0 10%;
     background: linear-gradient(90deg, #40A2D8, #F0EDCF);
     -webkit-background-clip: text;
     /*allow background-color appear through text */
@@ -42,10 +40,12 @@ body {
 }
 
 .header__score {
-    font-size: 2em;
+    font-size: 2.2em;
     border: 2px solid white;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 2vh;
+    margin: 0 10%;
+    border-radius: 20px;
+    width: fit-content;
 }
 
 .game-buttons {
@@ -168,10 +168,8 @@ body {
 
 .result-message {
     font-family: sans-serif;
-    position: fixed;
-    top: 40%;
-    left: 40%;
-    font-size: 10em;
+    position: absolute;
+    font-size: 8vh;
     color: #F0EDCF;
     animation: fly-up 2s ease-in-out forwards;
     /* speed animation executive.
@@ -200,8 +198,8 @@ body {
 
 .firework {
     position: fixed;
-    width: 2em;
-    height: 2em;
+    width: 5em;
+    height: 5em;
     background: white;
     border-radius: 50%;
     animation: fireworks 1s ease-out infinite;
@@ -217,18 +215,18 @@ body {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 540px) {
     .header {
         font-size: 2em;
+        /*align responsive width < 540*/
         flex-direction: column;
         align-items: center;
     }
 
     .header__title,
     .header__score {
-        font-size: 1em;
+        font-size: 1.5em;
     }
-
     .game-buttons {
         gap: 3%;
         padding: 3%;
@@ -244,7 +242,6 @@ body {
         bottom: 10px;
         right: 10px;
         padding: 5px;
-        font-size: 0.8em;
     }
 
     .modal__content {
@@ -252,3 +249,8 @@ body {
         padding: 10px;
     }
 }
+
+
+/* 'em' relative to the font-size of the parent element, 
+but if not the front-size of the parent element it will 
+default to the browser's default size. */
