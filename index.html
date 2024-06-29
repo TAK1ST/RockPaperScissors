@@ -1,44 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Overview</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(0, 52, 76, 1) 100%);
+        }
+
+        .box-container {
+
+            background-color: #0E46A3;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+            margin: 0 auto; /* Center the container horizontally */
+            text-align: center;
+            padding: 20px; /* Add padding for better spacing */
+        }
+
+        .box h1, .box p {
+            font-size: xx-large;
+            color: #E1F7F5;
+        }
+
+        .next-page-button {
+            
+            color: white;
+            border: 2px solid white;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .next-mainpage-button:hover {
+            background: linear-gradient(0deg, white, blue); /* Màu nền thay đổi khi hover */
+            
+            transform: scale(2); /* Phóng to button một chút */
+        }
+    </style>
 </head>
+
 <body>
-    
-    <header class="header">
-        <div class="header__title">ROCK PAPER SCISSORS</div>
-        <div class="header__score">SCORE<br><span id="score">0</span></div>
-    </header>
-    
-    <main class="game-buttons">
-
-        <div class="game-button game-button--rock" onclick="playGame('rock')">
-            <img src="/assets/fist.png" alt="Rock" class="game-button__img">
+    <div class="box-container">
+        <div class="box">
+            <h1>Overview</h1>
+            <p>The first known mention of the game was in the book  
+                by the Ming-dynasty writer Xie Zhaozhe, who wrote that 
+                the game dated back to the time of the Han dynasty. In
+                the book, the game was called shoushiling. Li Rihua's book Note of
+                Liuyanzhai also mentions this game.</p>
         </div>
+    </div>
+    <button class="next-mainpage-button" onclick="goToNextPage()">&#9654;</button>
 
-        <div class="game-button game-button--paper" onclick="playGame('paper')">
-            <img src="/assets/hand-paper.png" alt="Paper" class="game-button__img">
-        </div>
-
-        <div class="game-button game-button--scissors" onclick="playGame('scissors')">
-            <img src="/assets/scissors.png" alt="Scissors" class="game-button__img">
-        </div>
-
-    </main>
-
-    <footer class="rules" onclick="showRules()">RULES</footer>
-
-    <footer id="rulesModal" class="modal">
-        <div class="modal__content">
-            <!-- &times; create cross -->
-            <span class="modal__close" onclick="hideRules()">&times;</span> 
-            <h2>Game Rules</h2>
-                <img src="/assets/rock-paper-scissors.png" alt="">
-        </div>
-    </footer>
-    <script src="scripts.js"></script>
+    <script>
+        function goToNextPage() {
+            window.location.href = 'index.html'; // Replace with the actual URL of the next page
+        }
+    </script>
 </body>
+
 </html>

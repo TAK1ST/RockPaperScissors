@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header__title">ROCK PAPER SCISSORS</div>
+        <div class="header__score">SCORE<br><span id="score">0</span></div>
+    </header>
+    
+    <main class="game-buttons">
+
+        <div class="game-button game-button--rock" onclick="playGame('rock')">
+            <img src="/assets/fist.png" alt="Rock" class="game-button__img">
+        </div>
+
+        <div class="game-button game-button--paper" onclick="playGame('paper')">
+            <img src="/assets/hand-paper.png" alt="Paper" class="game-button__img">
+        </div>
+
+        <div class="game-button game-button--scissors" onclick="playGame('scissors')">
+            <img src="/assets/scissors.png" alt="Scissors" class="game-button__img">
+        </div>
+
+    </main>
+
+    <footer class="rules" onclick="showRules()">RULES</footer>
+
+    <footer id="rulesModal" class="modal">
+        <div class="modal__content">
+            <!-- &times; create cross -->
+            <span class="modal__close" onclick="hideRules()">&times;</span> 
+            <h2>Game Rules</h2>
+                <img src="/assets/rock-paper-scissors.png" alt="">
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
