@@ -1,4 +1,4 @@
-let score = 0;
+let score = 9;
 
 function playGame(userChoice) {
     const choices = ['rock', 'paper', 'scissors'];
@@ -46,6 +46,7 @@ function hideRules() {
     document.getElementById('rulesModal').style.display = 'none'; 
 }
 
+// hide rule tap everywhere.
 window.onclick = function(event) {
     if (event.target == document.getElementById('rulesModal')) {
         hideRules();
@@ -56,7 +57,6 @@ function showFireworks() {
     const fireworksContainer = document.createElement('div');
     fireworksContainer.id = 'fireworks-container';
     document.body.appendChild(fireworksContainer);
-
     for (let i = 0; i < 50; i++) {
         const firework = document.createElement('div');
         firework.className = 'firework';
